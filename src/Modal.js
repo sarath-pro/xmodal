@@ -63,7 +63,7 @@ function Modal({formClass, handleForm}) {
                 <h2>Fill Details</h2>
                 <form onSubmit={handleSubmit}>
                     <p>Username:</p>
-                    <input type='text' required />
+                    <input id='username' type='text' required />
                     <p>Email Address:</p>
                     <input id='email' type='email' required onInvalid={(e) => {
                         let val = e.target.value;
@@ -82,7 +82,7 @@ function Modal({formClass, handleForm}) {
                     <p>Date of Birth:</p>
                     <input id='dob' type='date' required />
                     <br />
-                    <input type='submit' value='Submit' />
+                    <input className='submit-button' type='submit' value='Submit' />
                 </form>
             </div>
         </div>
