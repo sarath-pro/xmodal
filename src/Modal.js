@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Modal.css'
 
-function Modal({formClass, handleForm}) {
+function Modal({formClass, handleForm, modalClass, hanldeModal}) {
 
     // useEffect(()=>{
     //     let email = document.getElementById('email')
@@ -12,8 +12,6 @@ function Modal({formClass, handleForm}) {
     //     //         e.target.setCustomValidity("Please include")
     //     // }
     // }, [])
-
-    const [class1, setClass1] = useState('modal one')
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -44,9 +42,10 @@ function Modal({formClass, handleForm}) {
     }
 
     return (
-        <div className={class1} onClick={() => {
+        <div className={modalClass} onClick={() => {
             console.log('clicked')
             handleForm()
+            hanldeModal()
             // setClass2('modal-content two')
         }}>
             <h1>User Details Modal</h1>

@@ -4,6 +4,7 @@ import Modal from './Modal';
 import {useEffect, useState} from 'react'
 function App() {
   const [formClass, setFormClass] = useState('modal-content two')
+  const [modalClass, setModalClass] = useState('modal')
   const handleForm = () => {
     console.log(formClass)
     if(String(formClass).includes('two')) {
@@ -11,6 +12,10 @@ function App() {
     }else {
       setFormClass('modal-content two')
     }
+  }
+  
+  const handleModal = () => {
+    setModalClass('one')
   }
 
   useEffect(()=>{
@@ -22,7 +27,7 @@ function App() {
   },[])
   return (
     <div className="App">
-      <Modal formClass={formClass} handleForm={handleForm}/>
+      <Modal formClass={formClass} handleForm={handleForm} modalClass={modalClass} hanldeModal={handleModal}/>
     </div>
   );
 }

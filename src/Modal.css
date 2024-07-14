@@ -21,7 +21,5 @@
 }
 
 .one {
-    background-color: #00000030;
-    height: 100vh;
-    overflow: hidden;
+   display: none;
 }
